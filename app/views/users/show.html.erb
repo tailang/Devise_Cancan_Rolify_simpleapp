@@ -1,0 +1,15 @@
+<%= @user.email %><br>
+<%= link_to '添加post_oprate_role', add_oprate_role_user_path(@user, :oprate => :post_oprate), :method => :post %><br>
+<%= link_to '移除post_oprate_role', remove_oprate_role_user_path(@user, :oprate => :post_oprate), :method => :post %><br>
+
+
+<%= link_to '添加comment_oprate_role', add_oprate_role_user_path(@user, :oprate => :comment_oprate), :method => :post %><br>
+<%= link_to '移除comment_oprate_role', remove_oprate_role_user_path(@user, :oprate => :comment_oprate), :method => :post %>
+<br>
+
+<h2>拥有的权限</h2>
+<% @roles.each do |r| %>
+  <%= r.name %><br>
+<% end %>
+
+
